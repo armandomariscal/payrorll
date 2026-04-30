@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  salary_base: 9.99
+  hire_date: 2026-04-29
+  status: MyString
+
+two:
+  name: MyString
+  email: MyString
+  salary_base: 9.99
+  hire_date: 2026-04-29
+  status: MyString
