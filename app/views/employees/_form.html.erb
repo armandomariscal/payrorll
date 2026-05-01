@@ -33,7 +33,7 @@
 
   <div>
     <%= form.label :status, style: "display: block" %>
-    <%= form.text_field :status %>
+    <%= form.select :status, Employee.statuses.keys.map { |s| [s.titleize, s] } %>
   </div>
 
   <div>
