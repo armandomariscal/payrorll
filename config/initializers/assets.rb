@@ -9,5 +9,10 @@ Rails.application.config.assets.version = "1.0"
 Rails.application.config.assets.version = "1.0"
 Rails.application.config.assets.paths << Rails.root.join("app/assets/builds")
 Rails.application.config.assets.paths << Rails.root.join("app/assets/fonts")
-Rails.application.config.assets.precompile += %w( Roboto-Medium-webfont.woff2 Roboto-Regular-webfont.woff2 )
-Rails.application.config.assets.precompile += %w[application.js application.css]
+Rails.application.config.assets.precompile += %w[
+    Roboto-Medium-webfont.woff2
+    Roboto-Regular-webfont.woff2
+]
+Rails.application.config.assets.precompile += %w[
+    application.js application.css
+]
