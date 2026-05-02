@@ -1,3 +1,6 @@
-// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
-import "@hotwired/turbo-rails"
-import "controllers"
+import * as webix from "webix";
+import "webix/webix.min.css";
+
+window.webix = webix;
+
+import "./webix/bootstrap";
