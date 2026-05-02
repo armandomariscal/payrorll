@@ -36,14 +36,14 @@
 # Gems
 /vendor/bundle
 
-# Node (si agregas tooling después)
+# Node
 /node_modules
 
-# Database (si algún día usas sqlite)
+# Database
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
-# Environment variables (refuerzo)
+# Environment variables
 /.env
 .env.*
 !.env.example
@@ -62,5 +62,11 @@
 .DS_Store
 Thumbs.db
 
-# Build artifacts adicionales
+# Build artifacts
 /public/packs
+/app/assets/builds/*
+!/app/assets/builds/.keep
+app/assets/builds/*
+
+# Dev
+docs/
