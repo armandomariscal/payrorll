@@ -64,3 +64,4 @@ Thumbs.db
 
 # Build artifacts adicionales
 /public/packs
+/docs
