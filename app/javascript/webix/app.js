@@ -14,7 +14,6 @@ export async function initApp() {
     await initWebixEmployees("webix-container");
     return;
   }
-
 }
 
 function initJetApp() {
