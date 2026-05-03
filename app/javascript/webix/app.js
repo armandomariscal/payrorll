@@ -1,4 +1,5 @@
 import LoginView from "./views/login";
+import { initWebixEmployees } from "./views/employees/";
 import { JetApp } from "webix-jet";
 
 export async function initApp() {
@@ -6,6 +7,11 @@ export async function initApp() {
 
   if (path === "/") {
     initJetApp();
+    return;
+  }
+
+  if (path.startsWith("/employees/webix")) {
+    await initWebixEmployees("webix-container");
     return;
   }
 }
