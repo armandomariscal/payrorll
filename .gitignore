@@ -69,4 +69,4 @@ Thumbs.db
 app/assets/builds/*
 
 # Dev
-docs/
+/docs
