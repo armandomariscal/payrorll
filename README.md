@@ -1,24 +1,37 @@
-# README
+# Payrorll
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Payroll system built with Ruby on Rails and Hotwire.
 
-Things you may want to cover:
+## Overview
 
-* Ruby version
+Payrorll is a payroll management system designed to handle employee payments, payroll periods, and salary calculations.
 
-* System dependencies
+This project is part of my journey to build production-ready backend systems using Rails.
 
-* Configuration
+## Tech Stack
 
-* Database creation
+- Ruby on Rails
+- PostgreSQL
+- Hotwire (Turbo + Stimulus)
 
-* Database initialization
+```bash
+git clone <repo>
+cd payrorll
+bundle install
+bin/rails db:create db:migrate
+bin/dev
+```
 
-* How to run the test suite
+## Features (planned)
+- Employee management
+- Payroll periods
+- Payslip generation
+- Salary calculations
 
-* Services (job queues, cache servers, search engines, etc.)
+## Status
 
-* Deployment instructions
+In development
 
-* ...
+## License
+
+MIT
