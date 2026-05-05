@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   stale_when_importmap_changes
 
   protect_from_forgery with: :null_session
-  
+
   def authenticate_user!
     if user_signed_in?
       super
