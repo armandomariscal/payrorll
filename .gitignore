@@ -67,6 +67,3 @@ Thumbs.db
 /app/assets/builds/*
 !/app/assets/builds/.keep
 app/assets/builds/*
-
-# Dev
-/docs
