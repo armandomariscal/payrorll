@@ -70,3 +70,5 @@ gem "jsbundling-rails", "~> 1.3"
 gem "devise", "~> 5.0"
 
 gem "devise-jwt", "~> 0.13.0"
+
+gem "rack-cors"
