@@ -28,13 +28,13 @@ class EmployeesController < ApplicationController
   def create
     @employee = Employee.new(employee_params)
 
-    @employee.status = 'active' if @employee.status.blank?
+    @employee.status = "active" if @employee.status.blank?
 
     respond_to do |format|
       if @employee.save
         format.html do
           redirect_to @employee,
-          notice: 'Employee was successfully created.'
+          notice: "Employee was successfully created."
         end
 
         format.json do
@@ -63,7 +63,7 @@ class EmployeesController < ApplicationController
 
         format.html do
           redirect_to @employee,
-          notice: 'Employee was successfully updated.',
+          notice: "Employee was successfully updated.",
           status: :see_other
         end
 
@@ -93,7 +93,7 @@ class EmployeesController < ApplicationController
     respond_to do |format|
       format.html do
         redirect_to employees_path,
-        notice: 'Employee was successfully destroyed.',
+        notice: "Employee was successfully destroyed.",
         status: :see_other
       end
 
