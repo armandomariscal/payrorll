@@ -42,8 +42,11 @@ rails routes | grep users
 rails routes | grep employees
 ```
 
-
 ---
+
+## CORS Configuration
+
+Create the Rails initializer used to configure cross-origin requests.
 
 ```bash
 touch config/initializers/cors.rb
