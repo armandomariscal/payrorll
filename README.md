@@ -2,6 +2,19 @@
 
 Modern payroll management system built with Ruby on Rails, PostgreSQL, and Webix SPA architecture.
 
+## Stack
+
+![Ruby](https://img.shields.io/badge/Ruby-3.4-CC342D?logo=ruby)
+![Rails](https://img.shields.io/badge/Rails-8.0-CC0000?logo=rubyonrails)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-4169E1?logo=postgresql)
+![Webix](https://img.shields.io/badge/Webix-Jet-00BFFF)
+![Devise](https://img.shields.io/badge/Devise-Auth-8A2BE2)
+![JWT](https://img.shields.io/badge/JWT-API_Auth-000000?logo=jsonwebtokens)
+![Hotwire](https://img.shields.io/badge/Hotwire-Turbo_+_Stimulus-FF4F00)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI-2088FF?logo=githubactions)
+![Architecture](https://img.shields.io/badge/Architecture-Full_Stack_SPA-8A2BE2)
+
 ## Overview
 
 Payrorll is a full-stack payroll platform focused on employee management, payroll operations, and internal administrative workflows.
