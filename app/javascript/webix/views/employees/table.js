@@ -4,6 +4,7 @@ export function EmployeesTable(employees = []) {
   return {
     view: 'datatable',
     id: 'employeesTable',
+    pager: 'employeesPager',
 
     columns: [
       { id: 'id', header: 'ID', width: 50 },
