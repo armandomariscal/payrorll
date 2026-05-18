@@ -13,6 +13,9 @@ Modern payroll management system built with Ruby on Rails, PostgreSQL, and Webix
 ![Hotwire](https://img.shields.io/badge/Hotwire-Turbo_+_Stimulus-FF4F00)
 ![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI-2088FF?logo=githubactions)
+![Testing](https://img.shields.io/badge/Testing-Minitest-00C853)
+![Quality](https://img.shields.io/badge/Code_Quality-RuboCop-000000)
+![Security](https://img.shields.io/badge/Security-Brakeman-orange)
 ![Architecture](https://img.shields.io/badge/Architecture-Full_Stack_SPA-8A2BE2)
 
 ## Overview
