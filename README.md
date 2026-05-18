@@ -66,13 +66,48 @@ The project is being developed as a production-oriented Rails application with e
 - Stimulus
 - esbuild
 
-### Tooling
+### Testing & Quality
 
+- Minitest
+- Fixtures
 - RuboCop
 - Brakeman
 - Bundler Audit
+
+### DevOps & Tooling
+
 - Docker
 - GitHub Actions
+- Kamal
+
+## Testing
+
+The project includes automated test coverage for:
+
+- Employee model validations
+- User authentication validations
+- Employee CRUD controller flows
+- Protected routes and authentication redirects
+- Invalid request handling
+- API and frontend integration flows
+
+Run the test suite:
+
+```bash
+bin/rails test
+```
+
+Run linting:
+
+```bash
+bin/rubocop
+```
+
+Run security analysis:
+
+```bash
+bin/brakeman
+```
 
 ## Project Structure
 
