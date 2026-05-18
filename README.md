@@ -13,6 +13,9 @@ Modern payroll management system built with Ruby on Rails, PostgreSQL, and Webix
 ![Hotwire](https://img.shields.io/badge/Hotwire-Turbo_+_Stimulus-FF4F00)
 ![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI-2088FF?logo=githubactions)
+![Testing](https://img.shields.io/badge/Testing-Minitest-00C853)
+![Quality](https://img.shields.io/badge/Code_Quality-RuboCop-000000)
+![Security](https://img.shields.io/badge/Security-Brakeman-orange)
 ![Architecture](https://img.shields.io/badge/Architecture-Full_Stack_SPA-8A2BE2)
 
 ## Overview
@@ -66,13 +69,48 @@ The project is being developed as a production-oriented Rails application with e
 - Stimulus
 - esbuild
 
-### Tooling
+### Testing & Quality
 
+- Minitest
+- Fixtures
 - RuboCop
 - Brakeman
 - Bundler Audit
+
+### DevOps & Tooling
+
 - Docker
 - GitHub Actions
+- Kamal
+
+## Testing
+
+The project includes automated test coverage for:
+
+- Employee model validations
+- User authentication validations
+- Employee CRUD controller flows
+- Protected routes and authentication redirects
+- Invalid request handling
+- API and frontend integration flows
+
+Run the test suite:
+
+```bash
+bin/rails test
+```
+
+Run linting:
+
+```bash
+bin/rubocop
+```
+
+Run security analysis:
+
+```bash
+bin/brakeman
+```
 
 ## Project Structure
 
