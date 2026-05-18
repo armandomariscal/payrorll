@@ -1,15 +1,71 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  email: MyString
-  salary_base: 9.99
-  hire_date: 2026-04-29
-  status: MyString
+anders:
+  name: Anders Nielsen
+  email: anders.nielsen@payrorll.dk
+  salary_base: 32000.50
+  hire_date: 2021-03-15
+  status: active
 
-two:
-  name: MyString
-  email: MyString
-  salary_base: 9.99
-  hire_date: 2026-04-29
-  status: MyString
+freja:
+  name: Freja Jensen
+  email: freja.jensen@payrorll.dk
+  salary_base: 28500.00
+  hire_date: 2022-07-01
+  status: active
+
+magnus:
+  name: Magnus Hansen
+  email: magnus.hansen@payrorll.dk
+  salary_base: 41000.75
+  hire_date: 2019-11-20
+  status: inactive
+
+camilla:
+  name: Camilla Pedersen
+  email: camilla.pedersen@payrorll.dk
+  salary_base: 36750.25
+  hire_date: 2020-05-10
+  status: active
+
+lukas:
+  name: Lukas Andersen
+  email: lukas.andersen@payrorll.dk
+  salary_base: 29800.00
+  hire_date: 2023-01-08
+  status: probation
+
+sofie:
+  name: Sofie Christensen
+  email: sofie.christensen@payrorll.dk
+  salary_base: 45200.90
+  hire_date: 2018-09-30
+  status: active
+
+oliver:
+  name: Oliver Larsen
+  email: oliver.larsen@payrorll.dk
+  salary_base: 26500.40
+  hire_date: 2024-02-14
+  status: suspended
+
+clara:
+  name: Clara Sørensen
+  email: clara.sorensen@payrorll.dk
+  salary_base: 38900.00
+  hire_date: 2021-12-05
+  status: active
+
+emil:
+  name: Emil Rasmussen
+  email: emil.rasmussen@payrorll.dk
+  salary_base: 47000.00
+  hire_date: 2017-06-18
+  status: terminated
+
+ida:
+  name: Ida Madsen
+  email: ida.madsen@payrorll.dk
+  salary_base: 31500.15
+  hire_date: 2025-01-02
+  status: active
