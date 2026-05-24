@@ -23,6 +23,9 @@
     
     <!-- JS BUILD -->
     <%= javascript_include_tag "application", type: "module", "data-turbo-track": "reload" %>
+    <% if request.path == '/' %>
+      <%= stylesheet_link_tag "hero", "data-turbo-track": "reload" %>
+    <% end %>
   </head>
 
   <body>
