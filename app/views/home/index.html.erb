@@ -1,1 +1,11 @@
-<div id="app" style="height:100vh;"></div>
+<% if request.path == '/' %>
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">Bienvenido a PayRoRll</h1>
+      <p class="hero-subtitle">Gestiona tu nómina de forma ágil, robusta y segura.</p>
+      <a href="/login" class="hero-btn">Ingresar al Sistema</a>
+    </div>
+  </div>
+<% else %>
+  <div id="app" style="width: 100vw; height: 100vh;"></div>
+<% end %>
