@@ -1,6 +1,7 @@
 # Development Environment
 
 ## Start Dev Environment
+
 ```bash
 bin/dev
 ```
@@ -8,6 +9,7 @@ bin/dev
 ---
 
 ## Database Console
+
 Opens the PostgreSQL console connected to the development database.
 
 ```bash
@@ -18,4 +20,18 @@ Example query:
 
 ```bash
 SELECT * FROM users;
+```
+
+## Cache Fix
+
+```bash
+- rails assets:clobber
+- rm -rf app/assets/builds/\*
+- npm run build
+```
+
+## Confirm new Routes
+
+```bash
+- rails routes -c employees
 ```

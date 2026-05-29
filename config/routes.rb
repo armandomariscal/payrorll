@@ -11,11 +11,6 @@ Rails.application.routes.draw do
   resources :employees do
     collection do
       get :webix
-    end
-  end
-
-  resources :employees do
-    collection do
       get :kept
     end
   end
