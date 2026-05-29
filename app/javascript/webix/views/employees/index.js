@@ -1,4 +1,4 @@
-import { getEmployees } from './services';
+import { getEmployees, getKeptEmployees } from './services';
 import { EmployeesTable } from './table';
 import { EmployeeEditModal } from './edit_modal';
 import { EmployeeAddModal } from './add_modal';
@@ -12,7 +12,7 @@ export async function initWebixEmployees(containerId = 'webix-container') {
     return;
   }
 
-  const employees = (await getEmployees()) || [];
+  const employees = (await getKeptEmployees()) || [];
 
   function hasActiveFilters() {
     return (

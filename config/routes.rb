@@ -14,6 +14,12 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :employees do
+    collection do
+      get :kept
+    end
+  end
+
   namespace :api do
     resources :employees
   end

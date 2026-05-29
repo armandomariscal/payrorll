@@ -7,9 +7,17 @@ class EmployeesController < ApplicationController
   ]
 
   before_action :authenticate_user!
-
+  
+  # GET /employees
   def index
     @employees = Employee.all.order(id: :desc)
+  end
+
+  # GET /employees/kept
+  def kept
+    @employees = Employee.kept.order(id: :desc)
+    
+    render :index
   end
 
   def webix

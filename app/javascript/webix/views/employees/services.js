@@ -20,6 +20,21 @@ export async function getEmployees() {
   }
 }
 
+export async function getKeptEmployees() {
+  try {
+    const response = await fetch(`${BASE_URL}/kept.json`);
+
+    if (!response.ok) {
+      throw new Error(`HTTP status: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching kept employees:', error);
+    return [];
+  }
+}
+
 export async function updateEmployee(id, data) {
   const response = await fetch(`${BASE_URL}/${id}.json`, {
     method: 'PUT',
