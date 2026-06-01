@@ -121,7 +121,8 @@ class EmployeesController < ApplicationController
       :email,
       :salary_base,
       :hire_date,
-      :status
+      :status,
+      :department_id
     )
   end
 end

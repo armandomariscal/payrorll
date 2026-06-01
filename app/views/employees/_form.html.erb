@@ -35,6 +35,11 @@
     <%= form.label :status, style: "display: block" %>
     <%= form.select :status, Employee.statuses.keys.map { |s| [s.titleize, s] } %>
   </div>
+  
+  <div>
+    <%= form.label :department_id, "Departamento", style: "display: block" %>
+    <%= form.collection_select :department_id, Department.all, :id, :name, { prompt: "Selecciona un departamento" } %>
+  </div>
 
   <div>
     <%= form.submit %>
