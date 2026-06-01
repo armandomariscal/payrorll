@@ -6,8 +6,8 @@ class AddDepartmentToEmployees < ActiveRecord::Migration[8.1]
       dir.up do
         if Employee.any?
           default_dept = Department.find_or_create_by!(
-            name: "General",
-            code: "GEN",
+            name: "General", 
+            code: "GEN", 
             description: "Default department created during migration."
           )
           Employee.where(department_id: nil).update_all(department_id: default_dept.id)

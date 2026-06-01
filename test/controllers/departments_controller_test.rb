@@ -12,8 +12,8 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create department" do
     assert_difference("Department.count") do
-      post departments_url, 
-           params: { department: { code: "NEW", description: "New Dept", name: "New Department" } }, 
+      post departments_url,
+           params: { department: { code: "NEW", description: "New Dept", name: "New Department" } },
            as: :json
     end
     assert_response :created
@@ -25,8 +25,8 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update department" do
-    patch department_url(@department), 
-          params: { department: { name: "Updated Name" } }, 
+    patch department_url(@department),
+          params: { department: { name: "Updated Name" } },
           as: :json
     assert_response :success
   end
