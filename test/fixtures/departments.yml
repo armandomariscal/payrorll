@@ -1,11 +1,9 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  name: MyString
-  code: MyString
-  description: MyText
+  name: 'Human Resources'
+  code: 'HR'
+  description: 'Handles personnel and hiring.'
 
 two:
-  name: MyString
-  code: MyString
-  description: MyText
+  name: 'Engineering'
+  code: 'ENG'
+  description: 'Handles product development.'

@@ -4,6 +4,7 @@ anders:
   salary_base: 32000.50
   hire_date: 2021-03-15
   status: active
+  department: one
 
 freja:
   name: Freja Jensen
@@ -11,6 +12,7 @@ freja:
   salary_base: 28500.00
   hire_date: 2022-07-01
   status: active
+  department: one
 
 magnus:
   name: Magnus Hansen
@@ -18,6 +20,7 @@ magnus:
   salary_base: 41000.75
   hire_date: 2019-11-20
   status: inactive
+  department: one
 
 camilla:
   name: Camilla Pedersen
@@ -25,6 +28,7 @@ camilla:
   salary_base: 36750.25
   hire_date: 2020-05-10
   status: active
+  department: one
 
 lukas:
   name: Lukas Andersen
@@ -32,6 +36,7 @@ lukas:
   salary_base: 29800.00
   hire_date: 2023-01-08
   status: probation
+  department: one
 
 sofie:
   name: Sofie Christensen
@@ -39,6 +44,7 @@ sofie:
   salary_base: 45200.90
   hire_date: 2018-09-30
   status: active
+  department: two
 
 oliver:
   name: Oliver Larsen
@@ -46,6 +52,7 @@ oliver:
   salary_base: 26500.40
   hire_date: 2024-02-14
   status: suspended
+  department: two
 
 clara:
   name: Clara Sørensen
@@ -53,6 +60,7 @@ clara:
   salary_base: 38900.00
   hire_date: 2021-12-05
   status: active
+  department: two
 
 emil:
   name: Emil Rasmussen
@@ -60,6 +68,7 @@ emil:
   salary_base: 47000.00
   hire_date: 2017-06-18
   status: terminated
+  department: two
 
 ida:
   name: Ida Madsen
@@ -67,3 +76,4 @@ ida:
   salary_base: 31500.15
   hire_date: 2025-01-02
   status: active
+  department: two
