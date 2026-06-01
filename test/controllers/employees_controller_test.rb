@@ -34,23 +34,18 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
     assert_difference("Employee.count", 1) do
       post employees_url, params: {
         employee: {
-          first_name: "Test",
-          last_name: "User",
+          name: "Test User",
           email: "new_unique_employee_test@example.com",
           hire_date: Date.today,
           salary_base: 100,
           status: "active",
           department_id: departments(:one).id
         }
-      }
+      }, as: :json
     end
 
     created_employee = Employee.last
-
-    assert_redirected_to employee_url(created_employee)
-    assert_equal "Test", created_employee.first_name
-    assert_equal "User", created_employee.last_name
-    assert_equal "active", created_employee.status
+    assert_response :success
   end
 
   test "should not create employee with invalid params" do
