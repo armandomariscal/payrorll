@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :departments
   get "/login", to: "home#index"
 
   devise_for :users, controllers: {

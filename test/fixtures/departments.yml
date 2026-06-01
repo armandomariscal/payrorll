@@ -1,0 +1,9 @@
+one:
+  name: 'Human Resources'
+  code: 'HR'
+  description: 'Handles personnel and hiring.'
+
+two:
+  name: 'Engineering'
+  code: 'ENG'
+  description: 'Handles product development.'
