@@ -1,11 +1,11 @@
-import { JetApp, EmptyRouter } from 'webix-jet';
+import { JetApp, HashRouter } from 'webix-jet';
 
 export default class App extends JetApp {
   constructor() {
     super({
       id: 'payrorll-spa',
       version: '1.0',
-      router: EmptyRouter,
+      router: HashRouter,
       start: '/login',
       debug: true,
       views: (name) => {
