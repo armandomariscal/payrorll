@@ -15,7 +15,8 @@ export default class TopView extends JetView {
           router: 'router',
           data: [
             { id: 'home', value: 'Home', icon: 'wxi-home' },
-            { id: 'employees', value: 'Employees', icon: 'wxi-user' }
+            { id: 'employees', value: 'Employees', icon: 'wxi-user' },
+            { id: 'departments', value: 'Departments', icon: 'wxi-columns' }
           ],
           click: (id) => {
             this.show(id);
