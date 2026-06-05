@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   resources :departments
+
+  get "departments_select_list",
+    to: "departments#select_list",
+    defaults: { format: :json }
+
   get "/login", to: "home#index"
 
   devise_for :users, controllers: {

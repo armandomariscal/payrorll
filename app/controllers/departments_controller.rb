@@ -6,6 +6,15 @@ class DepartmentsController < ApplicationController
     @departments = Department.all
   end
 
+  def select_list
+    render json: Department.order(:name).map { |department|
+      {
+        id: department.id,
+        value: department.name
+      }
+    }
+  end
+
   # GET /departments/1 or /departments/1.json
   def show
   end

@@ -60,15 +60,18 @@ export default class LoginView extends JetView {
       'meta[name="csrf-token"]'
     )?.content;
 
-    webix
-      .ajax()
+    const ajax = webix.ajax();
+
+    ajax.master = { withCredentials: true };
+
+    ajax
       .headers({
         'Content-Type': 'application/json',
         Accept: 'application/json',
         'X-CSRF-Token': csrfToken || ''
       })
       .post(
-        'http://localhost:3000/login',
+        '/login',
         JSON.stringify({
           user: {
             email: values.email,
@@ -77,12 +80,22 @@ export default class LoginView extends JetView {
         })
       )
       .then((response) => {
+        webix.message({
+          type: 'success',
+          text: 'Sesión iniciada correctamente'
+        });
         this.show('/top/home');
       })
       .catch((xhr) => {
+        let errorMsg = 'Login failed';
+        try {
+          const resp = JSON.parse(xhr.responseText);
+          errorMsg = resp.error || errorMsg;
+        } catch (e) {}
+
         webix.message({
           type: 'error',
-          text: 'Login failed: ' + (xhr.responseJSON?.error || 'Unknown error')
+          text: errorMsg
         });
       });
   }

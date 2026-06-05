@@ -16,5 +16,11 @@ export default class App extends JetApp {
 }
 
 webix.ready(() => {
+  webix.attachEvent(
+    'onBeforeAjax',
+    function (mode, url, data, request, headers, files, promise) {
+      request.withCredentials = true;
+    }
+  );
   new App().render();
 });
