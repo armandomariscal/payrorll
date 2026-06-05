@@ -2,7 +2,7 @@ import { JetView } from 'webix-jet';
 
 export default class DepartmentsView extends JetView {
   config() {
-    const BACKEND_URL = 'http://localhost:3000';
+    const BACKEND_URL = '';
 
     const table = {
       view: 'datatable',

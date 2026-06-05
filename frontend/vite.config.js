@@ -5,7 +5,21 @@ export default defineConfig({
   root: resolve(__dirname, 'src'),
   server: {
     port: 3001,
-    strictPort: true
+    strictPort: true,
+    proxy: {
+      '/login': {
+        target: 'http://localhost:3000',
+        changeOrigin: true
+      },
+      '/employees': {
+        target: 'http://localhost:3000',
+        changeOrigin: true
+      },
+      '/departments': {
+        target: 'http://localhost:3000',
+        changeOrigin: true
+      }
+    }
   },
   resolve: {
     alias: {
