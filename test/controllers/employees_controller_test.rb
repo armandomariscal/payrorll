@@ -94,4 +94,47 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to employees_url
   end
+
+  test "should create employee with department" do
+    department = departments(:one)
+
+    post employees_url, params: {
+      employee: {
+        name: "Department User",
+        email: "department_user@example.com",
+        hire_date: Date.today,
+        salary_base: 100,
+        status: "active",
+        department_id: department.id
+      }
+    }, as: :json
+
+    employee = Employee.order(:id).last
+
+    assert_response :success
+    assert_equal department.id, employee.department_id
+  end
+
+  test "should update employee department" do
+    department = departments(:two)
+
+    patch employee_url(@employee), params: {
+      employee: {
+        department_id: department.id
+      }
+    }
+
+    @employee.reload
+
+    assert_equal department.id, @employee.department_id
+  end
+
+  test "should include department information in employee response" do
+    get employee_url(@employee), as: :json
+
+    body = JSON.parse(response.body)
+
+    assert_response :success
+    assert_equal @employee.department.name, body["department_name"]
+  end
 end

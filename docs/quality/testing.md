@@ -5,6 +5,7 @@
 - Model tests for business logic
 
 ## Goal
+
 Ensure system stability and prevent regressions in core flows.
 
 ## Critical Flows Covered
@@ -21,3 +22,35 @@ Ensure system stability and prevent regressions in core flows.
 ## Strategy
 
 Prioritize business-critical logic over UI tests
+
+---
+
+## Automated Tests
+
+```bash
+bin/rails test
+```
+
+```bash
+bin/rails test test/controllers/employees_controller_test.rb
+```
+
+```bash
+bin/rails test test/controllers/departments_controller_test.rb
+```
+
+## Static Analysis
+
+```bash
+bin/rubocop
+```
+
+## Security Scanning
+
+```bash
+bin/brakeman
+```
+
+```bash
+bin/bundler-audit
+```
