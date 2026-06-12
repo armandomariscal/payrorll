@@ -1,4 +1,5 @@
 require "test_helper"
+require "securerandom"
 
 class DepartmentsControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -6,8 +7,8 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
     Department.delete_all
 
     @department = Department.create!(
-      name: "Information Technology",
-      code: "IT"
+      name: "Setup Department",
+      code: "SETUP"
     )
   end
 
@@ -21,7 +22,7 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
       post departments_url,
            params: {
              department: {
-               code: "NEW",
+               code: "NEW_#{SecureRandom.hex(2)}",
                description: "New Dept",
                name: "New Department"
              }
@@ -48,7 +49,7 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
   test "should destroy department" do
     empty = Department.create!(
       name: "Empty Dept",
-      code: "EMPTY",
+      code: "EMPTY_#{SecureRandom.hex(2)}",
       description: "No employees here"
     )
 
@@ -60,7 +61,10 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get departments select list" do
-    Department.create!(name: "Information Technology", code: "IT")
+    Department.create!(
+      name: "Information Technology",
+      code: "IT_#{SecureRandom.hex(3)}"
+    )
 
     get departments_select_list_url
 
@@ -68,7 +72,10 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "select list returns formatted departments" do
-    Department.create!(name: "Information Technology", code: "IT")
+    Department.create!(
+      name: "Information Technology",
+      code: "IT_#{SecureRandom.hex(3)}"
+    )
 
     get departments_select_list_url
 
@@ -79,8 +86,8 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "select list is ordered by name" do
-    Department.create!(name: "Sales", code: "SALES")
-    Department.create!(name: "Accounting", code: "ACC")
+    Department.create!(name: "Sales", code: "SALES_#{SecureRandom.hex(2)}")
+    Department.create!(name: "Accounting", code: "ACC_#{SecureRandom.hex(2)}")
 
     get departments_select_list_url
 
