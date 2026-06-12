@@ -7,12 +7,7 @@ class DepartmentsController < ApplicationController
   end
 
   def select_list
-    render json: Department.order(:name).map { |department|
-      {
-        id: department.id,
-        value: department.name
-      }
-    }
+    render json: Department.select_options
   end
 
   # GET /departments/1 or /departments/1.json
