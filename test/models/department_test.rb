@@ -30,31 +30,28 @@ class DepartmentTest < ActiveSupport::TestCase
   end
 
   test "ordered returns departments sorted by name" do
+    Department.delete_all
+
     Department.create!(name: "Sales", code: "SALES")
     Department.create!(name: "Accounting", code: "ACC")
 
-    departments = Department.ordered
-
     assert_equal(
-      [ "Accounting", "Sales" ],
-      departments.pluck(:name)
+      ["Accounting", "Sales"],
+      Department.ordered.pluck(:name)
     )
   end
 
   test "select_options returns id and value pairs" do
+    Department.delete_all
+
     department = Department.create!(
       name: "Information Technology",
       code: "IT"
     )
 
-    expected = [
-      {
-        id: department.id,
-        value: department.name
-      }
-    ]
-
-    assert_equal expected, Department.select_options
+    assert_equal [
+      { id: department.id, value: department.name }
+    ], Department.select_options
   end
 
   test "normalizes code and name before validation" do
