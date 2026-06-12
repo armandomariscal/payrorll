@@ -1,6 +1,11 @@
 require "test_helper"
 
 class DepartmentTest < ActiveSupport::TestCase
+  setup do
+    Employee.delete_all
+    Department.delete_all
+  end
+
   test "is invalid without name" do
     department = Department.new(code: "IT")
 
@@ -16,13 +21,13 @@ class DepartmentTest < ActiveSupport::TestCase
   end
 
   test "code must be unique" do
-  Department.create!(
-    name: "Information Technology",
-    code: "IT"
-  )
+    Department.create!(
+      name: "Information Technology",
+      code: "IT"
+    )
 
-  duplicate = Department.new(
-    name: "Another Department",
+    duplicate = Department.new(
+      name: "Another Department",
       code: "IT"
     )
 
@@ -30,20 +35,16 @@ class DepartmentTest < ActiveSupport::TestCase
   end
 
   test "ordered returns departments sorted by name" do
-    Department.delete_all
-
     Department.create!(name: "Sales", code: "SALES")
     Department.create!(name: "Accounting", code: "ACC")
 
     assert_equal(
-      [ "Accounting", "Sales" ],
+      ["Accounting", "Sales"],
       Department.ordered.pluck(:name)
     )
   end
 
   test "select_options returns id and value pairs" do
-    Department.delete_all
-
     department = Department.create!(
       name: "Information Technology",
       code: "IT"

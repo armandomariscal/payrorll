@@ -2,7 +2,13 @@ require "test_helper"
 
 class DepartmentsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @department = departments(:one)
+    Employee.delete_all
+    Department.delete_all
+
+    @department = Department.create!(
+      name: "Information Technology",
+      code: "IT"
+    )
   end
 
   test "should get index" do
@@ -13,9 +19,16 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
   test "should create department" do
     assert_difference("Department.count") do
       post departments_url,
-           params: { department: { code: "NEW", description: "New Dept", name: "New Department" } },
+           params: {
+             department: {
+               code: "NEW",
+               description: "New Dept",
+               name: "New Department"
+             }
+           },
            as: :json
     end
+
     assert_response :created
   end
 
@@ -28,23 +41,26 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
     patch department_url(@department),
           params: { department: { name: "Updated Name" } },
           as: :json
+
     assert_response :success
   end
 
   test "should destroy department" do
-    empty = Department.create!(name: "Empty Dept", code: "EMPTY", description: "No employees here")
+    empty = Department.create!(
+      name: "Empty Dept",
+      code: "EMPTY",
+      description: "No employees here"
+    )
 
     assert_difference("Department.count", -1) do
       delete department_url(empty), as: :json
     end
+
     assert_response :no_content
   end
 
   test "should get departments select list" do
-    Department.create!(
-      name: "Information Technology",
-      code: "IT"
-    )
+    Department.create!(name: "Information Technology", code: "IT")
 
     get departments_select_list_url
 
@@ -52,8 +68,6 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "select list returns formatted departments" do
-    Department.delete_all
-
     Department.create!(name: "Information Technology", code: "IT")
 
     get departments_select_list_url
@@ -61,6 +75,7 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
     json = JSON.parse(response.body)
 
     assert_equal 1, json.size
+    assert_equal "Information Technology", json[0]["value"]
   end
 
   test "select list is ordered by name" do
