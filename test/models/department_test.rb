@@ -36,7 +36,7 @@ class DepartmentTest < ActiveSupport::TestCase
     departments = Department.ordered
 
     assert_equal(
-      ["Accounting", "Sales"],
+      [ "Accounting", "Sales" ],
       departments.pluck(:name)
     )
   end
