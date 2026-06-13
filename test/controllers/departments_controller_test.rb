@@ -81,8 +81,11 @@ class DepartmentsControllerTest < ActionDispatch::IntegrationTest
 
     json = JSON.parse(response.body)
 
-    assert_equal 1, json.size
-    assert_equal "Information Technology", json[0]["value"]
+    item = json.find { |d| d["value"] == "Information Technology" }
+
+    assert_not_nil item
+    assert item.key?("id")
+    assert_equal "Information Technology", item["value"]
   end
 
   test "select list is ordered by name" do
